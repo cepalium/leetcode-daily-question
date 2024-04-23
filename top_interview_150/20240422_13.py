@@ -56,6 +56,7 @@ def romanToInt(s: str) -> int:
     # initialize variables
     result = roman_to_int_dict[s[-1]]
     n = len(s)
+    # work the roman-to-int backwards
     for i in range(n - 2, -1, -1):
         int_s_i = roman_to_int_dict[s[i]]
         int_s_i_plus_1 = roman_to_int_dict[s[i + 1]]
@@ -63,7 +64,6 @@ def romanToInt(s: str) -> int:
             result += int_s_i
         else:
             result -= int_s_i
-    print(s, result)
     return result
 
 
