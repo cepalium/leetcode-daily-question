@@ -55,6 +55,7 @@ def threeSum(nums: List[int]) -> List[List[int]]:
             if (nums_sorted[j] == nums_sorted[j - 1]) and (j > i + 1):
                 j += 1
                 continue
+
             sum_ijk = nums_sorted[i] + nums_sorted[j] + nums_sorted[k]
             if sum_ijk == target:
                 result.append([nums_sorted[i], nums_sorted[j], nums_sorted[k]])

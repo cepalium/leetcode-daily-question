@@ -32,7 +32,7 @@ def maxArea(height: List[int]) -> int:
 
     while i < j:
         # calculate area depending on current i & j
-        # area = lower height btw i & j * width, with width = j-1
+        # area = lower height btw i & j * width, with width = j-i
         if height[i] <= height[j]:
             area = height[i] * (j - i)
             i += 1
